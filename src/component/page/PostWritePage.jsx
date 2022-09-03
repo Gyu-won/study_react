@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import styled from "styled-components"
+import styled from "styled-components";
 import TextInput from "../ui/TextInput";
 import Button from "../ui/Button";
 
@@ -14,10 +14,15 @@ const Wrapper = styled.div`
 `;
 
 const Container = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
     width: 100%;
     max-width: 720px;
     & > * {
-        :not(:last-child){
+        :not(:last-child) {
             margin-bottom: 16px;
         }
     }
@@ -26,10 +31,10 @@ const Container = styled.div`
 function PostWritePage(props) {
     const navigate = useNavigate();
 
-    const [title, setTitle] = useState('');
-    const [content, setContent] = useState('');
+    const [title, setTitle] = useState("");
+    const [content, setContent] = useState("");
 
-    return(
+    return (
         <Wrapper>
             <Container>
                 <TextInput
