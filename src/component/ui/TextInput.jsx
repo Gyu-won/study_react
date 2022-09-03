@@ -2,7 +2,10 @@ import React from "react";
 import styled from "styled-components";
 
 const StyledTextArea = styled.textarea`
-    width: calc(100% -32px);
+    display: block;
+    margin-inline: auto;
+
+    width: calc(100% - 32px);
     ${(props) =>
         props.height &&
         `
